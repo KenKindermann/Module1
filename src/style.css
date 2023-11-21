@@ -1,79 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(10, 255, 186);
+  background: linear-gradient(90deg, rgb(1, 147, 105) 0%, rgb(0, 255, 200) 29%, rgb(163, 233, 218) 100%);
+  color: black;
+}
+
 nav {
-  border: 2px solid green;
-  border: solid green;
   display: flex;
   justify-content: space-between;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 0px 15px black;
+  margin-bottom: 2rem;
 }
 
 .nav-left {
-  border: 2px solid green;
   display: flex;
   align-items: center;
 }
 
-.nav-right {
-  border: 2px solid green;
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
-  border: 2px solid green;
   display: flex;
   justify-content: space-between;
+  list-style: none;
+  gap: 1.5rem;
 }
 
-li {
-  border: 2px solid green;
+nav ul li a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #b06161;
+}
+
+nav ul li a:active {
+  color: #b06161;
 }
 
 header {
-  border: 2px solid orange;
+  text-transform: uppercase;
+}
+
+header p {
+  text-shadow: 1px 0 10px black;
+}
+
+.duck a {
+  display: flex;
+  justify-content: center;
 }
 
 #duck {
-  border: 2px solid yellow;
   display: flex;
+  flex-direction: column;
 }
 
-.text {
-  border: 2px solid yellow;
-}
-
-.text p {
-  border: 2px solid yellow;
-}
-
-.duck {
-  border: 2px solid yellow;
-}
-
-#emergency {
-  border: 2px solid blue;
-}
-
-.grid-container {
-  border: 2px solid blue;
+#duck a img {
+  width: 30%;
+  height: auto;
 }
 
 .grid-item {
-  border: solid;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.2rem;
+  transform: rotate(30deg);
+}
+
+.grid {
+  width: 90%;
+  margin: 5rem auto;
 }
 
 footer {
-  border: 2px solid red;
   display: flex;
+  align-items: center;
   flex-direction: column;
   text-align: center;
+  background-color: bl;
 }
 
 .grid-container {
-  border: solid blue;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3px;
   width: 80%;
+  margin: 0 auto;
+}
+
+#emergency .grid {
+  display: grid;
+  grid-template-columns: 33% 1fr 1fr;
+  gap: 1rem;
+}
+
+#emergency a {
+  text-decoration: none;
+  color: black;
+}
+
+#emergency h2 {
+  animation: colorChange 3s infinite;
+}
+
+.grid-item:hover {
+  background-color: #369e86;
+  font-size: 1.7rem;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+}
+
+footer form input {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+footer form input::placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+footer form textarea {
+  background: transparent;
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+footer form textarea::placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+footer img {
+  width: 50%;
+  height: auto;
+}
+
+button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  border-radius: 3px;
+  padding: 0.5rem;
+  width: 30%;
+  margin-bottom: 4rem;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  background-color: rgb(5, 73, 73);
+}
+
+@keyframes colorChange {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+header,
+main {
+  max-width: 1000px;
   margin: 0 auto;
 }
